@@ -8,6 +8,10 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 15px;
 }
 
 header {
@@ -20,9 +24,10 @@ header {
 }
 
 main {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 3rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
@@ -31,10 +36,11 @@ main {
 }
 
 #floatingImage {
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     display: block;
-    margin: 0 auto 3rem auto;
+    margin: 20px auto;
     border-radius: 50%;
     border: 3px solid #6366f1;
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
@@ -102,4 +108,24 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 0 10px;
+    }
+    
+    .form-group {
+        width: 100%;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
